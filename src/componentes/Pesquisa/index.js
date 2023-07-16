@@ -49,14 +49,14 @@ function Pesquisa(){
             <Titulo>Ja sabe por onde começar?</Titulo>
             <Subtitulo>Encontre eu livro em nossa estante</Subtitulo>
             <Input placeholder="Escreva sua próxima leitura" onBlur={ evento => {
-                    const textoDigitado = evento.target.value
-                    const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
-                    setLivrosPesquisados(resultadoPesquisa)
+                const textoDigitado = evento.target.value
+                const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
+                setLivrosPesquisados(resultadoPesquisa)
                 }}
             />
             {livrosPesquisados.map(livro => (
                 <Resultado>
-                    <img src={livro.src} />
+                    <img src={livro.src} alt="livro"/>
                     <p>{livro.nome}</p>
                 </Resultado>
             ))}
