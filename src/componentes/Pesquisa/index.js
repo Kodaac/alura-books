@@ -46,7 +46,7 @@ function Pesquisa(){
 
     return(
         <PesquisaContainer>
-            <Titulo>Ja sabe por onde começar?</Titulo>
+            <Titulo>Já sabe por onde começar?</Titulo>
             <Subtitulo>Encontre eu livro em nossa estante</Subtitulo>
             <Input placeholder="Escreva sua próxima leitura" onBlur={ evento => {
                 const textoDigitado = evento.target.value

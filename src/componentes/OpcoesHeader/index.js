@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Menu = styled.ul`
     display: flex;
@@ -16,13 +17,13 @@ const MenuItem = styled.li`
     min-width: 120px;
 `
 
-const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'ESTANTE']
 
 function OpcoesHeader(){
     return (
         <Menu>
           {textoOpcoes.map( (texto) => (
-            <MenuItem><p>{texto}</p></MenuItem>
+           <Link to={`/${texto.toLowerCase()}`}><MenuItem><p>{texto}</p></MenuItem></Link>
           ))}
         </Menu>
     );
